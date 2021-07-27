@@ -47,7 +47,7 @@ Sometimes you need to have a way to create KeyPair conditionally but Terraform d
 module "keypair" {
   source = "terraform-opentelekomcloud-modules/keypair/opentelekomcloud"
 
-  create_key_pair = false
+  create_keypair = false
   # ... omitted
 }
 ```
