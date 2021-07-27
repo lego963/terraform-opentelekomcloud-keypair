@@ -1,6 +1,9 @@
 ###########
-# RESOURCE
+# Key Pair
 ###########
-resource "opentelekomcloud_fake_v1" "this" {
-  name = var.example
+resource "opentelekomcloud_compute_keypair_v2" "this" {
+  count = var.create_key_pair ? 1 : 0
+
+  name       = "${var.prefix}_keypair"
+  public_key = var.public_key
 }
